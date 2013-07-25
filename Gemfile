@@ -8,6 +8,7 @@ group :development do
   gem 'sqlite3-ruby', :require => "sqlite3"
   gem 'rspec-rails', ">=2.0.0.beta"
 end
+gem 'rspec-core', '2.14.4'
 gem 'capybara', '2.1.0'
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '2.1.1'

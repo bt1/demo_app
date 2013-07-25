@@ -4,23 +4,38 @@ describe "Static pages" do
 
   describe "Home page" do
 
-    it "should have the content 'Sample App'" do
+    it "should have the content 'Demo App'" do
       visit '/static_pages/home'
-      expect(page).to have_content('Welcome to the Demo App')
+      expect(page).to have_content('Demo App')
+    end
+
+    it "should have the right title" do
+      visit '/static_pages/home'
+      expect(page).to have_title("Demo App | Home")
     end
   end
 
-  describe "Help Page" do
+  describe "Help page" do
     it "should have the content 'Help'" do
       visit '/static_pages/help'
       expect(page).to have_content('Help')
     end
+
+    it "should have the right title" do
+      visit '/static_pages/help'
+      expect(page).to have_title("Demo App | Help")
+    end
   end
 
-  describe "About Page" do
-    it "should have the content 'About'" do
+  describe "About page" do
+    #it "should have the content 'About'" do
+     # visit '/static_pages/about'
+     # expect(page).to have_content('About')
+   # end
+
+    it "should have the right title" do
       visit '/static_pages/about'
-      expect(page).to have_content('About')
+      expect(page).to have_title("Demo App | About")
     end
   end
 end
